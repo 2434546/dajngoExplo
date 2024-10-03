@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}Liste des Voitures BMW{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<div class="container my-5">
+    <h1 class="mb-4 text-center">Nos Voitures</h1>
+    <div class="row">
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+            <div class="card h-100">
+                <img src="{% static 'img/bmw_m5_touring.png' %}" class="card-img-top car-img" alt="BMW M5 TOURING">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">BMW M5 TOURING</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Puissance :</strong> 717 ch</li>
+                        <li><strong>0-100 km/h :</strong> 3,6 s</li>
+                        <li><strong>Vitesse maximale :</strong> 250 km/h</li>
+                        <li><strong>Autonomie électrique :</strong> 40 km</li>
+                    </ul>
+                    <a href="{% url 'reservations' %}" class="btn btn-primary mt-auto">Réserver</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+            <div class="card h-100">
+                <img src="{% static 'img/bmw_x5_m.png' %}" class="card-img-top car-img" alt="BMW X5 M">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">BMW X5 M</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Puissance :</strong> 600 ch</li>
+                        <li><strong>0-100 km/h :</strong> 3,8 s</li>
+                        <li><strong>Vitesse maximale :</strong> 250 km/h</li>
+                        <li><strong>Consommation :</strong> 13,0 L/100 km</li>
+                        <li><strong>Émissions de CO2 :</strong> 296 g/km</li>
+                    </ul>
+                    <a href="{% url 'reservations' %}" class="btn btn-primary mt-auto">Réserver</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+            <div class="card h-100">
+                <img src="{% static 'img/bmw_m4_cs.png' %}" class="card-img-top car-img" alt="BMW M4 CS">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">BMW M4 CS</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Puissance :</strong> 405 (543) ch</li>
+                        <li><strong>Couple :</strong> 650 lb-ft</li>
+                        <li><strong>0-100 km/h :</strong> 3,4 s</li>
+                        <li><strong>Vitesse maximale :</strong> 302 km/h*</li>
+                    </ul>
+                    <a href="{% url 'reservations' %}" class="btn btn-primary mt-auto">Réserver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
